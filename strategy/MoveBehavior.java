@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
 public abstract class MoveBehavior {
-    private static final int DEFAULT_SPEED = 200;
+    protected static final int DEFAULT_SPEED = 200;
     private static final int NUM_MOVES = 30;
 
     /**
@@ -23,13 +23,18 @@ public abstract class MoveBehavior {
      *                  is fast
      */
     public void move(ArrayList<String> character, int speed) {
-        // TBD
+        for(int i = 0; i < NUM_MOVES; i++) {
+            this.displayCharacter(character);
+            this.pushCharacterForward(character);
+            this.sleep(speed);
+            this.clear();
+        }
     }
 
     /**
      * Displays the character, e.g.
-     * o
-     * -|-
+     *  o
+     * <|>
      * / \
      * 
      * @param character An arrayList were index 0 is the first line of character,
@@ -61,7 +66,7 @@ public abstract class MoveBehavior {
         try {
             TimeUnit.MILLISECONDS.sleep(num);
         } catch (Exception e) {
-            System.out.println("Timmer error");
+            System.out.println("Timer error");
         }
     }
 

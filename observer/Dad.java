@@ -15,7 +15,6 @@ public class Dad implements Observer {
      * @param baby the subject observed.
      */
     public Dad(Subject baby) {
-        this.baby = baby;
         baby.registerObserver(this);
         this.rand = new Random();
     }

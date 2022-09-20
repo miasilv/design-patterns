@@ -112,7 +112,7 @@ public class CourseDriver {
 	 * @param topic The topic to show the assignments for
 	 */
 	private void displayAssignments(Topic topic) {
-		CourseIterator assignmentIterator = csce247.createIterator();
+		AssignmentIterator assignmentIterator = csce247.createIterator();
 
 		while (assignmentIterator.hasNext()) {
 			Assignment assignment = assignmentIterator.next();

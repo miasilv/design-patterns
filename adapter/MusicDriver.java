@@ -8,7 +8,7 @@ public class MusicDriver {
 	public void RunMusicDriver() {
 		ArrayList<String> songs = new ArrayList<>(List.of("A hard Day's Night", "I should Have Known Better",
 				"If I Fell", "I'm Happy Just To Dance With You", "And I Love Her"));
-		AnalogAlbum beatlesTape = new Cassett(songs);
+		AnalogAlbum beatlesTape = new Cassette(songs);
 
 		ArrayList<String> songs2 = new ArrayList<>(
 				List.of("Hello", "Hey Now!", "She's Electric", "Wonderwall", "Champagne Supernova"));
